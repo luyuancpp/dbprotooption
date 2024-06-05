@@ -1,6 +1,7 @@
 syntax = "proto3";
-option optimize_for = SPEED;				
-option go_package = "./;dbprotooption";
+option optimize_for = SPEED;		
+		
+option go_package = "github.com/luyuancpp/dbprotootopn;db";
 
 import "descriptor.proto";
 
