@@ -36,6 +36,7 @@ message golang_test1
   uint32 group_id = 4;
   player player = 5;
   uint64 player_id = 6;
+  string extra_info = 7; // 额外字段，区分于原始表
 }
 
 // 新增表2：golang_test2（结构类似，修改字段类型）

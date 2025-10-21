@@ -167,6 +167,7 @@ type GolangTest1 struct {
 	GroupId       uint32                 `protobuf:"varint,4,opt,name=group_id,json=groupId,proto3" json:"group_id,omitempty"`
 	Player        *Player                `protobuf:"bytes,5,opt,name=player,proto3" json:"player,omitempty"`
 	PlayerId      uint64                 `protobuf:"varint,6,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	ExtraInfo     string                 `protobuf:"bytes,7,opt,name=extra_info,json=extraInfo,proto3" json:"extra_info,omitempty"` // 额外字段，区分于原始表
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -241,6 +242,13 @@ func (x *GolangTest1) GetPlayerId() uint64 {
 		return x.PlayerId
 	}
 	return 0
+}
+
+func (x *GolangTest1) GetExtraInfo() string {
+	if x != nil {
+		return x.ExtraInfo
+	}
+	return ""
 }
 
 // 新增表2：golang_test2（结构类似，修改字段类型）
@@ -620,14 +628,16 @@ const file_mysql_database_table_proto_rawDesc = "" +
 	"\x04port\x18\x03 \x01(\rR\x04port\x12\x19\n" +
 	"\bgroup_id\x18\x04 \x01(\rR\agroupId\x12\x1f\n" +
 	"\x06player\x18\x05 \x01(\v2\a.playerR\x06player\x12\x1b\n" +
-	"\tplayer_id\x18\x06 \x01(\x04R\bplayerId:\x1e\x8a\x92\xf4\x01\vgolang_test\x92\x92\xf4\x01\x02id\xb2\x92\xf4\x01\x02id\"\xbc\x01\n" +
+	"\tplayer_id\x18\x06 \x01(\x04R\bplayerId:\x1e\x8a\x92\xf4\x01\vgolang_test\x92\x92\xf4\x01\x02id\xb2\x92\xf4\x01\x02id\"\xdb\x01\n" +
 	"\fgolang_test1\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\rR\x02id\x12\x0e\n" +
 	"\x02ip\x18\x02 \x01(\tR\x02ip\x12\x12\n" +
 	"\x04port\x18\x03 \x01(\rR\x04port\x12\x19\n" +
 	"\bgroup_id\x18\x04 \x01(\rR\agroupId\x12\x1f\n" +
 	"\x06player\x18\x05 \x01(\v2\a.playerR\x06player\x12\x1b\n" +
-	"\tplayer_id\x18\x06 \x01(\x04R\bplayerId:\x1f\x8a\x92\xf4\x01\fgolang_test1\x92\x92\xf4\x01\x02id\xb2\x92\xf4\x01\x02id\"\xdb\x01\n" +
+	"\tplayer_id\x18\x06 \x01(\x04R\bplayerId\x12\x1d\n" +
+	"\n" +
+	"extra_info\x18\a \x01(\tR\textraInfo:\x1f\x8a\x92\xf4\x01\fgolang_test1\x92\x92\xf4\x01\x02id\xb2\x92\xf4\x01\x02id\"\xdb\x01\n" +
 	"\fgolang_test2\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\rR\x02id\x12\x0e\n" +
 	"\x02ip\x18\x02 \x01(\tR\x02ip\x12\x12\n" +
