@@ -252,6 +252,7 @@ type GolangTest2 struct {
 	GroupId       uint32                 `protobuf:"varint,4,opt,name=group_id,json=groupId,proto3" json:"group_id,omitempty"`
 	Player        *Player                `protobuf:"bytes,5,opt,name=player,proto3" json:"player,omitempty"`
 	PlayerId      uint64                 `protobuf:"varint,6,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	ExtraInfo     string                 `protobuf:"bytes,7,opt,name=extra_info,json=extraInfo,proto3" json:"extra_info,omitempty"` // 额外字段，区分于原始表
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -328,6 +329,13 @@ func (x *GolangTest2) GetPlayerId() uint64 {
 	return 0
 }
 
+func (x *GolangTest2) GetExtraInfo() string {
+	if x != nil {
+		return x.ExtraInfo
+	}
+	return ""
+}
+
 // 新增表3：golang_test3（结构类似，增加嵌套字段）
 type GolangTest3 struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
@@ -337,6 +345,7 @@ type GolangTest3 struct {
 	GroupId       uint32                 `protobuf:"varint,4,opt,name=group_id,json=groupId,proto3" json:"group_id,omitempty"`
 	Player        *Player                `protobuf:"bytes,5,opt,name=player,proto3" json:"player,omitempty"`
 	PlayerId      uint64                 `protobuf:"varint,6,opt,name=player_id,json=playerId,proto3" json:"player_id,omitempty"`
+	ExtraPlayer   *Player                `protobuf:"bytes,7,opt,name=extra_player,json=extraPlayer,proto3" json:"extra_player,omitempty"` // 额外的嵌套player字段
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -411,6 +420,13 @@ func (x *GolangTest3) GetPlayerId() uint64 {
 		return x.PlayerId
 	}
 	return 0
+}
+
+func (x *GolangTest3) GetExtraPlayer() *Player {
+	if x != nil {
+		return x.ExtraPlayer
+	}
+	return nil
 }
 
 // 列表消息（用于批量查询）
@@ -611,21 +627,24 @@ const file_mysql_database_table_proto_rawDesc = "" +
 	"\x04port\x18\x03 \x01(\rR\x04port\x12\x19\n" +
 	"\bgroup_id\x18\x04 \x01(\rR\agroupId\x12\x1f\n" +
 	"\x06player\x18\x05 \x01(\v2\a.playerR\x06player\x12\x1b\n" +
-	"\tplayer_id\x18\x06 \x01(\x04R\bplayerId:\x1f\x8a\x92\xf4\x01\fgolang_test1\x92\x92\xf4\x01\x02id\xb2\x92\xf4\x01\x02id\"\xbc\x01\n" +
+	"\tplayer_id\x18\x06 \x01(\x04R\bplayerId:\x1f\x8a\x92\xf4\x01\fgolang_test1\x92\x92\xf4\x01\x02id\xb2\x92\xf4\x01\x02id\"\xdb\x01\n" +
 	"\fgolang_test2\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\rR\x02id\x12\x0e\n" +
 	"\x02ip\x18\x02 \x01(\tR\x02ip\x12\x12\n" +
 	"\x04port\x18\x03 \x01(\x04R\x04port\x12\x19\n" +
 	"\bgroup_id\x18\x04 \x01(\rR\agroupId\x12\x1f\n" +
 	"\x06player\x18\x05 \x01(\v2\a.playerR\x06player\x12\x1b\n" +
-	"\tplayer_id\x18\x06 \x01(\x04R\bplayerId:\x1f\x8a\x92\xf4\x01\fgolang_test2\x92\x92\xf4\x01\x02id\xb2\x92\xf4\x01\x02id\"\xbc\x01\n" +
+	"\tplayer_id\x18\x06 \x01(\x04R\bplayerId\x12\x1d\n" +
+	"\n" +
+	"extra_info\x18\a \x01(\tR\textraInfo:\x1f\x8a\x92\xf4\x01\fgolang_test2\x92\x92\xf4\x01\x02id\xb2\x92\xf4\x01\x02id\"\xe8\x01\n" +
 	"\fgolang_test3\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\rR\x02id\x12\x0e\n" +
 	"\x02ip\x18\x02 \x01(\tR\x02ip\x12\x12\n" +
 	"\x04port\x18\x03 \x01(\rR\x04port\x12\x19\n" +
 	"\bgroup_id\x18\x04 \x01(\rR\agroupId\x12\x1f\n" +
 	"\x06player\x18\x05 \x01(\v2\a.playerR\x06player\x12\x1b\n" +
-	"\tplayer_id\x18\x06 \x01(\x04R\bplayerId:\x1f\x8a\x92\xf4\x01\fgolang_test3\x92\x92\xf4\x01\x02id\xb2\x92\xf4\x01\x02id\"=\n" +
+	"\tplayer_id\x18\x06 \x01(\x04R\bplayerId\x12*\n" +
+	"\fextra_player\x18\a \x01(\v2\a.playerR\vextraPlayer:\x1f\x8a\x92\xf4\x01\fgolang_test3\x92\x92\xf4\x01\x02id\xb2\x92\xf4\x01\x02id\"=\n" +
 	"\x10golang_test_list\x12)\n" +
 	"\ttest_list\x18\x01 \x03(\v2\f.golang_testR\btestList\"?\n" +
 	"\x11golang_test1_list\x12*\n" +
@@ -664,15 +683,16 @@ var file_mysql_database_table_proto_depIdxs = []int32{
 	0, // 1: golang_test1.player:type_name -> player
 	0, // 2: golang_test2.player:type_name -> player
 	0, // 3: golang_test3.player:type_name -> player
-	1, // 4: golang_test_list.test_list:type_name -> golang_test
-	2, // 5: golang_test1_list.test_list:type_name -> golang_test1
-	3, // 6: golang_test2_list.test_list:type_name -> golang_test2
-	4, // 7: golang_test3_list.test_list:type_name -> golang_test3
-	8, // [8:8] is the sub-list for method output_type
-	8, // [8:8] is the sub-list for method input_type
-	8, // [8:8] is the sub-list for extension type_name
-	8, // [8:8] is the sub-list for extension extendee
-	0, // [0:8] is the sub-list for field type_name
+	0, // 4: golang_test3.extra_player:type_name -> player
+	1, // 5: golang_test_list.test_list:type_name -> golang_test
+	2, // 6: golang_test1_list.test_list:type_name -> golang_test1
+	3, // 7: golang_test2_list.test_list:type_name -> golang_test2
+	4, // 8: golang_test3_list.test_list:type_name -> golang_test3
+	9, // [9:9] is the sub-list for method output_type
+	9, // [9:9] is the sub-list for method input_type
+	9, // [9:9] is the sub-list for extension type_name
+	9, // [9:9] is the sub-list for extension extendee
+	0, // [0:9] is the sub-list for field type_name
 }
 
 func init() { file_mysql_database_table_proto_init() }
