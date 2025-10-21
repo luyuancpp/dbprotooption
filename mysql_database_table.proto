@@ -21,6 +21,7 @@ message golang_test
   uint32 port = 3;
   uint32 group_id = 4;
   player player = 5;
+  uint64 player_id = 6;
 }
 
 // 新增表1：golang_test1（结构类似，增加一个额外字段）
@@ -34,7 +35,7 @@ message golang_test1
   uint32 port = 3;
   uint32 group_id = 4;
   player player = 5;
-  string extra_info = 6; // 额外字段，区分于原始表
+  uint64 player_id = 6;
 }
 
 // 新增表2：golang_test2（结构类似，修改字段类型）
@@ -48,6 +49,7 @@ message golang_test2
   uint64 port = 3; // 端口改为uint64，区分于原始表
   uint32 group_id = 4;
   player player = 5;
+  uint64 player_id = 6;
 }
 
 // 新增表3：golang_test3（结构类似，增加嵌套字段）
@@ -61,7 +63,7 @@ message golang_test3
   uint32 port = 3;
   uint32 group_id = 4;
   player player = 5;
-  player extra_player = 6; // 额外的嵌套player字段
+  uint64 player_id = 6;
 }
 
 // 列表消息（用于批量查询）
