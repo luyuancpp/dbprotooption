@@ -10,6 +10,7 @@ message player
   string name = 2;
 }
 
+// 原始表
 message golang_test
 {
   option(OptionTableName)  = "golang_test";
@@ -22,7 +23,61 @@ message golang_test
   player player = 5;
 }
 
+// 新增表1：golang_test1（结构类似，增加一个额外字段）
+message golang_test1
+{
+  option(OptionTableName)  = "golang_test1";
+  option(OptionPrimaryKey) = "id";
+  option(OptionAutoIncrementKey) = "id";
+  uint32 id = 1;
+  string ip = 2;
+  uint32 port = 3;
+  uint32 group_id = 4;
+  player player = 5;
+  string extra_info = 6; // 额外字段，区分于原始表
+}
+
+// 新增表2：golang_test2（结构类似，修改字段类型）
+message golang_test2
+{
+  option(OptionTableName)  = "golang_test2";
+  option(OptionPrimaryKey) = "id";
+  option(OptionAutoIncrementKey) = "id";
+  uint32 id = 1;
+  string ip = 2;
+  uint64 port = 3; // 端口改为uint64，区分于原始表
+  uint32 group_id = 4;
+  player player = 5;
+}
+
+// 新增表3：golang_test3（结构类似，增加嵌套字段）
+message golang_test3
+{
+  option(OptionTableName)  = "golang_test3";
+  option(OptionPrimaryKey) = "id";
+  option(OptionAutoIncrementKey) = "id";
+  uint32 id = 1;
+  string ip = 2;
+  uint32 port = 3;
+  uint32 group_id = 4;
+  player player = 5;
+  player extra_player = 6; // 额外的嵌套player字段
+}
+
+// 列表消息（用于批量查询）
 message golang_test_list
 {
   repeated golang_test test_list = 1;
+}
+message golang_test1_list
+{
+  repeated golang_test1 test_list = 1;
+}
+message golang_test2_list
+{
+  repeated golang_test2 test_list = 1;
+}
+message golang_test3_list
+{
+  repeated golang_test3 test_list = 1;
 }
