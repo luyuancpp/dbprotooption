@@ -20,6 +20,10 @@ extend google.protobuf.MessageOptions {
 	optional string	OptionProcedureResult	= 500010	;	//存储过程返回结果的PB结构Name
 	optional string	OptionIndex				= 500011	;	//建立索引
 	optional string OptionUniqueKey			= 500012	;   //
+
+	// ---------- 属性同步相关 ----------
+	optional bool OptionBaseAttributeSync   = 700000;  // 基础属性同步
+	optional bool OptionDeltaAttributeSync  = 700001;  // 增量属性同步
 }
 
 // 描述字段的option
