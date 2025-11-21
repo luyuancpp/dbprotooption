@@ -664,7 +664,7 @@ const file_mysql_database_table_proto_rawDesc = "" +
 	"\x11golang_test2_list\x12*\n" +
 	"\ttest_list\x18\x01 \x03(\v2\r.golang_test2R\btestList\"?\n" +
 	"\x11golang_test3_list\x12*\n" +
-	"\ttest_list\x18\x01 \x03(\v2\r.golang_test3R\btestListB2Z0github.com/luyuancpp/dbprotooption;messageoptionb\x06proto3"
+	"\ttest_list\x18\x01 \x03(\v2\r.golang_test3R\btestListB0Z.github.com/luyuancpp/protooption;messageoptionb\x06proto3"
 
 var (
 	file_mysql_database_table_proto_rawDescOnce sync.Once

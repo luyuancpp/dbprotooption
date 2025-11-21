@@ -434,7 +434,7 @@ const file_db_base_proto_rawDesc = "" +
 	"\x11OptionDBProcParam\x12\x1d.google.protobuf.FieldOptions\x18\xc6\xcf$ \x01(\bR\x11OptionDBProcParam\x88\x01\x01:H\n" +
 	"\rOptionOldName\x12\x1d.google.protobuf.FieldOptions\x18\xc7\xcf$ \x01(\tR\rOptionOldName\x88\x01\x01:D\n" +
 	"\vOptionTable\x12\x1d.google.protobuf.FieldOptions\x18\xc8\xcf$ \x01(\tR\vOptionTable\x88\x01\x01:P\n" +
-	"\x11OptionBackUpTabel\x12\x1d.google.protobuf.FieldOptions\x18\xc9\xcf$ \x01(\tR\x11OptionBackUpTabel\x88\x01\x01B4H\x01Z0github.com/luyuancpp/dbprotooption;messageoptionb\x06proto3"
+	"\x11OptionBackUpTabel\x12\x1d.google.protobuf.FieldOptions\x18\xc9\xcf$ \x01(\tR\x11OptionBackUpTabel\x88\x01\x01B2H\x01Z.github.com/luyuancpp/protooption;messageoptionb\x06proto3"
 
 var (
 	file_db_base_proto_rawDescOnce sync.Once
