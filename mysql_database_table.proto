@@ -1,7 +1,7 @@
 // mysql_database_table.proto
 syntax = "proto3";
 
-import "db_base.proto";
+import "proto_option.proto";
 
 option go_package = "github.com/luyuancpp/protooption;messageoption";
 

@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.9
 // 	protoc        v6.31.1
-// source: db_base.proto
+// source: proto_option.proto
 
 package messageoption
 
@@ -74,11 +74,11 @@ func (x OPERATE_TYPE) String() string {
 }
 
 func (OPERATE_TYPE) Descriptor() protoreflect.EnumDescriptor {
-	return file_db_base_proto_enumTypes[0].Descriptor()
+	return file_proto_option_proto_enumTypes[0].Descriptor()
 }
 
 func (OPERATE_TYPE) Type() protoreflect.EnumType {
-	return &file_db_base_proto_enumTypes[0]
+	return &file_proto_option_proto_enumTypes[0]
 }
 
 func (x OPERATE_TYPE) Number() protoreflect.EnumNumber {
@@ -87,7 +87,7 @@ func (x OPERATE_TYPE) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use OPERATE_TYPE.Descriptor instead.
 func (OPERATE_TYPE) EnumDescriptor() ([]byte, []int) {
-	return file_db_base_proto_rawDescGZIP(), []int{0}
+	return file_proto_option_proto_rawDescGZIP(), []int{0}
 }
 
 type BS_RESULT_TYPE int32
@@ -123,11 +123,11 @@ func (x BS_RESULT_TYPE) String() string {
 }
 
 func (BS_RESULT_TYPE) Descriptor() protoreflect.EnumDescriptor {
-	return file_db_base_proto_enumTypes[1].Descriptor()
+	return file_proto_option_proto_enumTypes[1].Descriptor()
 }
 
 func (BS_RESULT_TYPE) Type() protoreflect.EnumType {
-	return &file_db_base_proto_enumTypes[1]
+	return &file_proto_option_proto_enumTypes[1]
 }
 
 func (x BS_RESULT_TYPE) Number() protoreflect.EnumNumber {
@@ -136,17 +136,17 @@ func (x BS_RESULT_TYPE) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use BS_RESULT_TYPE.Descriptor instead.
 func (BS_RESULT_TYPE) EnumDescriptor() ([]byte, []int) {
-	return file_db_base_proto_rawDescGZIP(), []int{1}
+	return file_proto_option_proto_rawDescGZIP(), []int{1}
 }
 
-var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
+var file_proto_option_proto_extTypes = []protoimpl.ExtensionInfo{
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*uint32)(nil),
 		Field:         500000,
 		Name:          "OptionTableId",
 		Tag:           "varint,500000,opt,name=OptionTableId",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -154,7 +154,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         500001,
 		Name:          "OptionTableName",
 		Tag:           "bytes,500001,opt,name=OptionTableName",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -162,7 +162,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         500002,
 		Name:          "OptionPrimaryKey",
 		Tag:           "bytes,500002,opt,name=OptionPrimaryKey",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -170,7 +170,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         500003,
 		Name:          "OptionForeignKey",
 		Tag:           "bytes,500003,opt,name=OptionForeignKey",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -178,7 +178,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         500005,
 		Name:          "OptionForeignReferences",
 		Tag:           "bytes,500005,opt,name=OptionForeignReferences",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -186,7 +186,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         500006,
 		Name:          "OptionAutoIncrementKey",
 		Tag:           "bytes,500006,opt,name=OptionAutoIncrementKey",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -194,7 +194,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         500007,
 		Name:          "OptionBackupTableName",
 		Tag:           "bytes,500007,opt,name=OptionBackupTableName",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -202,7 +202,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         500008,
 		Name:          "OptionLoadOnly",
 		Tag:           "varint,500008,opt,name=OptionLoadOnly",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -210,7 +210,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         500009,
 		Name:          "OptionProcedureName",
 		Tag:           "bytes,500009,opt,name=OptionProcedureName",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -218,7 +218,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         500010,
 		Name:          "OptionProcedureResult",
 		Tag:           "bytes,500010,opt,name=OptionProcedureResult",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -226,7 +226,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         500011,
 		Name:          "OptionIndex",
 		Tag:           "bytes,500011,opt,name=OptionIndex",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -234,7 +234,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         500012,
 		Name:          "OptionUniqueKey",
 		Tag:           "bytes,500012,opt,name=OptionUniqueKey",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -242,7 +242,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         700000,
 		Name:          "OptionBaseAttributeSync",
 		Tag:           "varint,700000,opt,name=OptionBaseAttributeSync",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
@@ -250,7 +250,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         700001,
 		Name:          "OptionDeltaAttributeSync",
 		Tag:           "varint,700001,opt,name=OptionDeltaAttributeSync",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
@@ -258,7 +258,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         600000,
 		Name:          "OptionRepeatLimit",
 		Tag:           "varint,600000,opt,name=OptionRepeatLimit",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
@@ -266,7 +266,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         600001,
 		Name:          "OptionDBFieldExtra",
 		Tag:           "bytes,600001,opt,name=OptionDBFieldExtra",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
@@ -274,7 +274,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         600002,
 		Name:          "OptionDBReadOnly",
 		Tag:           "varint,600002,opt,name=OptionDBReadOnly",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
@@ -282,7 +282,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         600003,
 		Name:          "OptionDBNamePrefix",
 		Tag:           "bytes,600003,opt,name=OptionDBNamePrefix",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
@@ -290,7 +290,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         600004,
 		Name:          "OptionDBLoadSql",
 		Tag:           "bytes,600004,opt,name=OptionDBLoadSql",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
@@ -298,7 +298,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         600005,
 		Name:          "OptionDBNeedEscape",
 		Tag:           "varint,600005,opt,name=OptionDBNeedEscape",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
@@ -306,7 +306,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         600006,
 		Name:          "OptionDBProcParam",
 		Tag:           "varint,600006,opt,name=OptionDBProcParam",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
@@ -314,7 +314,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         600007,
 		Name:          "OptionOldName",
 		Tag:           "bytes,600007,opt,name=OptionOldName",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
@@ -322,7 +322,7 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         600008,
 		Name:          "OptionTable",
 		Tag:           "bytes,600008,opt,name=OptionTable",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.FieldOptions)(nil),
@@ -330,73 +330,73 @@ var file_db_base_proto_extTypes = []protoimpl.ExtensionInfo{
 		Field:         600009,
 		Name:          "OptionBackUpTabel",
 		Tag:           "bytes,600009,opt,name=OptionBackUpTabel",
-		Filename:      "db_base.proto",
+		Filename:      "proto_option.proto",
 	},
 }
 
 // Extension fields to descriptorpb.MessageOptions.
 var (
 	// optional uint32 OptionTableId = 500000;
-	E_OptionTableId = &file_db_base_proto_extTypes[0] //表ID
+	E_OptionTableId = &file_proto_option_proto_extTypes[0] //表ID
 	// optional string OptionTableName = 500001;
-	E_OptionTableName = &file_db_base_proto_extTypes[1] //表名
+	E_OptionTableName = &file_proto_option_proto_extTypes[1] //表名
 	// optional string OptionPrimaryKey = 500002;
-	E_OptionPrimaryKey = &file_db_base_proto_extTypes[2] //主键
+	E_OptionPrimaryKey = &file_proto_option_proto_extTypes[2] //主键
 	// optional string OptionForeignKey = 500003;
-	E_OptionForeignKey = &file_db_base_proto_extTypes[3] //外键
+	E_OptionForeignKey = &file_proto_option_proto_extTypes[3] //外键
 	// optional string OptionForeignReferences = 500005;
-	E_OptionForeignReferences = &file_db_base_proto_extTypes[4] //外键的关联表
+	E_OptionForeignReferences = &file_proto_option_proto_extTypes[4] //外键的关联表
 	// optional string OptionAutoIncrementKey = 500006;
-	E_OptionAutoIncrementKey = &file_db_base_proto_extTypes[5] //自增长的Key
+	E_OptionAutoIncrementKey = &file_proto_option_proto_extTypes[5] //自增长的Key
 	// optional string OptionBackupTableName = 500007;
-	E_OptionBackupTableName = &file_db_base_proto_extTypes[6] //备份表的名称
+	E_OptionBackupTableName = &file_proto_option_proto_extTypes[6] //备份表的名称
 	// optional bool OptionLoadOnly = 500008;
-	E_OptionLoadOnly = &file_db_base_proto_extTypes[7] //只用于数据加载
+	E_OptionLoadOnly = &file_proto_option_proto_extTypes[7] //只用于数据加载
 	// optional string OptionProcedureName = 500009;
-	E_OptionProcedureName = &file_db_base_proto_extTypes[8] //存储过程名称
+	E_OptionProcedureName = &file_proto_option_proto_extTypes[8] //存储过程名称
 	// optional string OptionProcedureResult = 500010;
-	E_OptionProcedureResult = &file_db_base_proto_extTypes[9] //存储过程返回结果的PB结构Name
+	E_OptionProcedureResult = &file_proto_option_proto_extTypes[9] //存储过程返回结果的PB结构Name
 	// optional string OptionIndex = 500011;
-	E_OptionIndex = &file_db_base_proto_extTypes[10] //建立索引
+	E_OptionIndex = &file_proto_option_proto_extTypes[10] //建立索引
 	// optional string OptionUniqueKey = 500012;
-	E_OptionUniqueKey = &file_db_base_proto_extTypes[11] //
+	E_OptionUniqueKey = &file_proto_option_proto_extTypes[11] //
 	// ---------- 属性同步相关 ----------
 	//
 	// optional bool OptionBaseAttributeSync = 700000;
-	E_OptionBaseAttributeSync = &file_db_base_proto_extTypes[12] // 基础属性同步
+	E_OptionBaseAttributeSync = &file_proto_option_proto_extTypes[12] // 基础属性同步
 	// optional bool OptionDeltaAttributeSync = 700001;
-	E_OptionDeltaAttributeSync = &file_db_base_proto_extTypes[13] // 增量属性同步
+	E_OptionDeltaAttributeSync = &file_proto_option_proto_extTypes[13] // 增量属性同步
 )
 
 // Extension fields to descriptorpb.FieldOptions.
 var (
 	// optional uint32 OptionRepeatLimit = 600000;
-	E_OptionRepeatLimit = &file_db_base_proto_extTypes[14] // repeat 字段限制的个数
+	E_OptionRepeatLimit = &file_proto_option_proto_extTypes[14] // repeat 字段限制的个数
 	// optional string OptionDBFieldExtra = 600001;
-	E_OptionDBFieldExtra = &file_db_base_proto_extTypes[15] // 创建数据库要用到得额外信息，如果没有该属性表示非数据库字段
+	E_OptionDBFieldExtra = &file_proto_option_proto_extTypes[15] // 创建数据库要用到得额外信息，如果没有该属性表示非数据库字段
 	// optional bool OptionDBReadOnly = 600002;
-	E_OptionDBReadOnly = &file_db_base_proto_extTypes[16] // 该字段对DB是否只读
+	E_OptionDBReadOnly = &file_proto_option_proto_extTypes[16] // 该字段对DB是否只读
 	// optional string OptionDBNamePrefix = 600003;
-	E_OptionDBNamePrefix = &file_db_base_proto_extTypes[17] // 数据库名称前缀
+	E_OptionDBNamePrefix = &file_proto_option_proto_extTypes[17] // 数据库名称前缀
 	// optional string OptionDBLoadSql = 600004;
-	E_OptionDBLoadSql = &file_db_base_proto_extTypes[18] // 数据加载SQL语句
+	E_OptionDBLoadSql = &file_proto_option_proto_extTypes[18] // 数据加载SQL语句
 	// optional bool OptionDBNeedEscape = 600005;
-	E_OptionDBNeedEscape = &file_db_base_proto_extTypes[19] // 字段是否需要转义存储
+	E_OptionDBNeedEscape = &file_proto_option_proto_extTypes[19] // 字段是否需要转义存储
 	// optional bool OptionDBProcParam = 600006;
-	E_OptionDBProcParam = &file_db_base_proto_extTypes[20] // 是否存储过程参数
+	E_OptionDBProcParam = &file_proto_option_proto_extTypes[20] // 是否存储过程参数
 	// optional string OptionOldName = 600007;
-	E_OptionOldName = &file_db_base_proto_extTypes[21] //用来自动修改字段名
+	E_OptionOldName = &file_proto_option_proto_extTypes[21] //用来自动修改字段名
 	// optional string OptionTable = 600008;
-	E_OptionTable = &file_db_base_proto_extTypes[22] // 建表名称
+	E_OptionTable = &file_proto_option_proto_extTypes[22] // 建表名称
 	// optional string OptionBackUpTabel = 600009;
-	E_OptionBackUpTabel = &file_db_base_proto_extTypes[23] //备份表
+	E_OptionBackUpTabel = &file_proto_option_proto_extTypes[23] //备份表
 )
 
-var File_db_base_proto protoreflect.FileDescriptor
+var File_proto_option_proto protoreflect.FileDescriptor
 
-const file_db_base_proto_rawDesc = "" +
+const file_proto_option_proto_rawDesc = "" +
 	"\n" +
-	"\rdb_base.proto\x1a\x10descriptor.proto*\xcf\x01\n" +
+	"\x12proto_option.proto\x1a\x10descriptor.proto*\xcf\x01\n" +
 	"\fOPERATE_TYPE\x12\x10\n" +
 	"\fOPERATE_NONE\x10\x00\x12\x12\n" +
 	"\x0eOPERATE_INSERT\x10\x01\x12\x12\n" +
@@ -437,25 +437,25 @@ const file_db_base_proto_rawDesc = "" +
 	"\x11OptionBackUpTabel\x12\x1d.google.protobuf.FieldOptions\x18\xc9\xcf$ \x01(\tR\x11OptionBackUpTabel\x88\x01\x01B2H\x01Z.github.com/luyuancpp/protooption;messageoptionb\x06proto3"
 
 var (
-	file_db_base_proto_rawDescOnce sync.Once
-	file_db_base_proto_rawDescData []byte
+	file_proto_option_proto_rawDescOnce sync.Once
+	file_proto_option_proto_rawDescData []byte
 )
 
-func file_db_base_proto_rawDescGZIP() []byte {
-	file_db_base_proto_rawDescOnce.Do(func() {
-		file_db_base_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_db_base_proto_rawDesc), len(file_db_base_proto_rawDesc)))
+func file_proto_option_proto_rawDescGZIP() []byte {
+	file_proto_option_proto_rawDescOnce.Do(func() {
+		file_proto_option_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_option_proto_rawDesc), len(file_proto_option_proto_rawDesc)))
 	})
-	return file_db_base_proto_rawDescData
+	return file_proto_option_proto_rawDescData
 }
 
-var file_db_base_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_db_base_proto_goTypes = []any{
+var file_proto_option_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
+var file_proto_option_proto_goTypes = []any{
 	(OPERATE_TYPE)(0),                   // 0: OPERATE_TYPE
 	(BS_RESULT_TYPE)(0),                 // 1: BS_RESULT_TYPE
 	(*descriptorpb.MessageOptions)(nil), // 2: google.protobuf.MessageOptions
 	(*descriptorpb.FieldOptions)(nil),   // 3: google.protobuf.FieldOptions
 }
-var file_db_base_proto_depIdxs = []int32{
+var file_proto_option_proto_depIdxs = []int32{
 	2,  // 0: OptionTableId:extendee -> google.protobuf.MessageOptions
 	2,  // 1: OptionTableName:extendee -> google.protobuf.MessageOptions
 	2,  // 2: OptionPrimaryKey:extendee -> google.protobuf.MessageOptions
@@ -487,27 +487,27 @@ var file_db_base_proto_depIdxs = []int32{
 	0,  // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_db_base_proto_init() }
-func file_db_base_proto_init() {
-	if File_db_base_proto != nil {
+func init() { file_proto_option_proto_init() }
+func file_proto_option_proto_init() {
+	if File_proto_option_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_db_base_proto_rawDesc), len(file_db_base_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_option_proto_rawDesc), len(file_proto_option_proto_rawDesc)),
 			NumEnums:      2,
 			NumMessages:   0,
 			NumExtensions: 24,
 			NumServices:   0,
 		},
-		GoTypes:           file_db_base_proto_goTypes,
-		DependencyIndexes: file_db_base_proto_depIdxs,
-		EnumInfos:         file_db_base_proto_enumTypes,
-		ExtensionInfos:    file_db_base_proto_extTypes,
+		GoTypes:           file_proto_option_proto_goTypes,
+		DependencyIndexes: file_proto_option_proto_depIdxs,
+		EnumInfos:         file_proto_option_proto_enumTypes,
+		ExtensionInfos:    file_proto_option_proto_extTypes,
 	}.Build()
-	File_db_base_proto = out.File
-	file_db_base_proto_goTypes = nil
-	file_db_base_proto_depIdxs = nil
+	File_proto_option_proto = out.File
+	file_proto_option_proto_goTypes = nil
+	file_proto_option_proto_depIdxs = nil
 }

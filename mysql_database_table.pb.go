@@ -620,7 +620,7 @@ var File_mysql_database_table_proto protoreflect.FileDescriptor
 
 const file_mysql_database_table_proto_rawDesc = "" +
 	"\n" +
-	"\x1amysql_database_table.proto\x1a\rdb_base.proto\"9\n" +
+	"\x1amysql_database_table.proto\x1a\x12proto_option.proto\"9\n" +
 	"\x06player\x12\x1b\n" +
 	"\tplayer_id\x18\x01 \x01(\x04R\bplayerId\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\"\xba\x01\n" +
@@ -712,7 +712,7 @@ func file_mysql_database_table_proto_init() {
 	if File_mysql_database_table_proto != nil {
 		return
 	}
-	file_db_base_proto_init()
+	file_proto_option_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
