@@ -3,7 +3,7 @@ syntax = "proto3";
 
 import "db_base.proto";
 
-option go_package = "./;dbprotooption";
+option go_package = "github.com/luyuancpp/dbprotooption;messageoption";
 
 message player
 {

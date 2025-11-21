@@ -6,10 +6,9 @@
 // 	protoc        v6.31.1
 // source: mysql_database_table.proto
 
-package dbprotooption
+package messageoption
 
 import (
-	_ "github.com/luyuancpp/dbprotooption"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -665,7 +664,7 @@ const file_mysql_database_table_proto_rawDesc = "" +
 	"\x11golang_test2_list\x12*\n" +
 	"\ttest_list\x18\x01 \x03(\v2\r.golang_test2R\btestList\"?\n" +
 	"\x11golang_test3_list\x12*\n" +
-	"\ttest_list\x18\x01 \x03(\v2\r.golang_test3R\btestListB\x12Z\x10./;dbprotooptionb\x06proto3"
+	"\ttest_list\x18\x01 \x03(\v2\r.golang_test3R\btestListB2Z0github.com/luyuancpp/dbprotooption;messageoptionb\x06proto3"
 
 var (
 	file_mysql_database_table_proto_rawDescOnce sync.Once
@@ -713,6 +712,7 @@ func file_mysql_database_table_proto_init() {
 	if File_mysql_database_table_proto != nil {
 		return
 	}
+	file_db_base_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
