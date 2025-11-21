@@ -1,4 +1,4 @@
-module github.com/luyuancpp/dbprotooption
+module github.com/luyuancpp/protooption
 
 go 1.23
 
