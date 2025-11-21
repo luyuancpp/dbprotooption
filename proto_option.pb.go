@@ -305,6 +305,14 @@ var file_proto_option_proto_extTypes = []protoimpl.ExtensionInfo{
 	{
 		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
 		ExtensionType: (*bool)(nil),
+		Field:         500013,
+		Name:          "OptionIsPlayerDatabase",
+		Tag:           "varint,500013,opt,name=OptionIsPlayerDatabase",
+		Filename:      "proto_option.proto",
+	},
+	{
+		ExtendedType:  (*descriptorpb.MessageOptions)(nil),
+		ExtensionType: (*bool)(nil),
 		Field:         700000,
 		Name:          "OptionBaseAttributeSync",
 		Tag:           "varint,700000,opt,name=OptionBaseAttributeSync",
@@ -432,36 +440,38 @@ var (
 	E_OptionIndex = &file_proto_option_proto_extTypes[11] //建立索引
 	// optional string OptionUniqueKey = 500012;
 	E_OptionUniqueKey = &file_proto_option_proto_extTypes[12] //
+	// optional bool OptionIsPlayerDatabase = 500013;
+	E_OptionIsPlayerDatabase = &file_proto_option_proto_extTypes[13] // 标识是否是玩家数据库
 	// ---------- 属性同步相关 ----------
 	//
 	// optional bool OptionBaseAttributeSync = 700000;
-	E_OptionBaseAttributeSync = &file_proto_option_proto_extTypes[13] // 基础属性同步
+	E_OptionBaseAttributeSync = &file_proto_option_proto_extTypes[14] // 基础属性同步
 	// optional bool OptionDeltaAttributeSync = 700001;
-	E_OptionDeltaAttributeSync = &file_proto_option_proto_extTypes[14] // 增量属性同步
+	E_OptionDeltaAttributeSync = &file_proto_option_proto_extTypes[15] // 增量属性同步
 )
 
 // Extension fields to descriptorpb.FieldOptions.
 var (
 	// optional uint32 OptionRepeatLimit = 600000;
-	E_OptionRepeatLimit = &file_proto_option_proto_extTypes[15] // repeat 字段限制的个数
+	E_OptionRepeatLimit = &file_proto_option_proto_extTypes[16] // repeat 字段限制的个数
 	// optional string OptionDBFieldExtra = 600001;
-	E_OptionDBFieldExtra = &file_proto_option_proto_extTypes[16] // 创建数据库要用到得额外信息，如果没有该属性表示非数据库字段
+	E_OptionDBFieldExtra = &file_proto_option_proto_extTypes[17] // 创建数据库要用到得额外信息，如果没有该属性表示非数据库字段
 	// optional bool OptionDBReadOnly = 600002;
-	E_OptionDBReadOnly = &file_proto_option_proto_extTypes[17] // 该字段对DB是否只读
+	E_OptionDBReadOnly = &file_proto_option_proto_extTypes[18] // 该字段对DB是否只读
 	// optional string OptionDBNamePrefix = 600003;
-	E_OptionDBNamePrefix = &file_proto_option_proto_extTypes[18] // 数据库名称前缀
+	E_OptionDBNamePrefix = &file_proto_option_proto_extTypes[19] // 数据库名称前缀
 	// optional string OptionDBLoadSql = 600004;
-	E_OptionDBLoadSql = &file_proto_option_proto_extTypes[19] // 数据加载SQL语句
+	E_OptionDBLoadSql = &file_proto_option_proto_extTypes[20] // 数据加载SQL语句
 	// optional bool OptionDBNeedEscape = 600005;
-	E_OptionDBNeedEscape = &file_proto_option_proto_extTypes[20] // 字段是否需要转义存储
+	E_OptionDBNeedEscape = &file_proto_option_proto_extTypes[21] // 字段是否需要转义存储
 	// optional bool OptionDBProcParam = 600006;
-	E_OptionDBProcParam = &file_proto_option_proto_extTypes[21] // 是否存储过程参数
+	E_OptionDBProcParam = &file_proto_option_proto_extTypes[22] // 是否存储过程参数
 	// optional string OptionOldName = 600007;
-	E_OptionOldName = &file_proto_option_proto_extTypes[22] //用来自动修改字段名
+	E_OptionOldName = &file_proto_option_proto_extTypes[23] //用来自动修改字段名
 	// optional string OptionTable = 600008;
-	E_OptionTable = &file_proto_option_proto_extTypes[23] // 建表名称
+	E_OptionTable = &file_proto_option_proto_extTypes[24] // 建表名称
 	// optional string OptionBackUpTabel = 600009;
-	E_OptionBackUpTabel = &file_proto_option_proto_extTypes[24] //备份表
+	E_OptionBackUpTabel = &file_proto_option_proto_extTypes[25] //备份表
 )
 
 var File_proto_option_proto protoreflect.FileDescriptor
@@ -501,7 +511,8 @@ const file_proto_option_proto_rawDesc = "" +
 	"\x13OptionProcedureName\x12\x1f.google.protobuf.MessageOptions\x18\xa9\xc2\x1e \x01(\tR\x13OptionProcedureName\x88\x01\x01:Z\n" +
 	"\x15OptionProcedureResult\x12\x1f.google.protobuf.MessageOptions\x18\xaa\xc2\x1e \x01(\tR\x15OptionProcedureResult\x88\x01\x01:F\n" +
 	"\vOptionIndex\x12\x1f.google.protobuf.MessageOptions\x18\xab\xc2\x1e \x01(\tR\vOptionIndex\x88\x01\x01:N\n" +
-	"\x0fOptionUniqueKey\x12\x1f.google.protobuf.MessageOptions\x18\xac\xc2\x1e \x01(\tR\x0fOptionUniqueKey\x88\x01\x01:^\n" +
+	"\x0fOptionUniqueKey\x12\x1f.google.protobuf.MessageOptions\x18\xac\xc2\x1e \x01(\tR\x0fOptionUniqueKey\x88\x01\x01:\\\n" +
+	"\x16OptionIsPlayerDatabase\x12\x1f.google.protobuf.MessageOptions\x18\xad\xc2\x1e \x01(\bR\x16OptionIsPlayerDatabase\x88\x01\x01:^\n" +
 	"\x17OptionBaseAttributeSync\x12\x1f.google.protobuf.MessageOptions\x18\xe0\xdc* \x01(\bR\x17OptionBaseAttributeSync\x88\x01\x01:`\n" +
 	"\x18OptionDeltaAttributeSync\x12\x1f.google.protobuf.MessageOptions\x18\xe1\xdc* \x01(\bR\x18OptionDeltaAttributeSync\x88\x01\x01:P\n" +
 	"\x11OptionRepeatLimit\x12\x1d.google.protobuf.FieldOptions\x18\xc0\xcf$ \x01(\rR\x11OptionRepeatLimit\x88\x01\x01:R\n" +
@@ -550,23 +561,24 @@ var file_proto_option_proto_depIdxs = []int32{
 	4,  // 10: OptionProcedureResult:extendee -> google.protobuf.MessageOptions
 	4,  // 11: OptionIndex:extendee -> google.protobuf.MessageOptions
 	4,  // 12: OptionUniqueKey:extendee -> google.protobuf.MessageOptions
-	4,  // 13: OptionBaseAttributeSync:extendee -> google.protobuf.MessageOptions
-	4,  // 14: OptionDeltaAttributeSync:extendee -> google.protobuf.MessageOptions
-	5,  // 15: OptionRepeatLimit:extendee -> google.protobuf.FieldOptions
-	5,  // 16: OptionDBFieldExtra:extendee -> google.protobuf.FieldOptions
-	5,  // 17: OptionDBReadOnly:extendee -> google.protobuf.FieldOptions
-	5,  // 18: OptionDBNamePrefix:extendee -> google.protobuf.FieldOptions
-	5,  // 19: OptionDBLoadSql:extendee -> google.protobuf.FieldOptions
-	5,  // 20: OptionDBNeedEscape:extendee -> google.protobuf.FieldOptions
-	5,  // 21: OptionDBProcParam:extendee -> google.protobuf.FieldOptions
-	5,  // 22: OptionOldName:extendee -> google.protobuf.FieldOptions
-	5,  // 23: OptionTable:extendee -> google.protobuf.FieldOptions
-	5,  // 24: OptionBackUpTabel:extendee -> google.protobuf.FieldOptions
-	0,  // 25: OptionFileDefaultNode:type_name -> NodeType
-	26, // [26:26] is the sub-list for method output_type
-	26, // [26:26] is the sub-list for method input_type
-	25, // [25:26] is the sub-list for extension type_name
-	0,  // [0:25] is the sub-list for extension extendee
+	4,  // 13: OptionIsPlayerDatabase:extendee -> google.protobuf.MessageOptions
+	4,  // 14: OptionBaseAttributeSync:extendee -> google.protobuf.MessageOptions
+	4,  // 15: OptionDeltaAttributeSync:extendee -> google.protobuf.MessageOptions
+	5,  // 16: OptionRepeatLimit:extendee -> google.protobuf.FieldOptions
+	5,  // 17: OptionDBFieldExtra:extendee -> google.protobuf.FieldOptions
+	5,  // 18: OptionDBReadOnly:extendee -> google.protobuf.FieldOptions
+	5,  // 19: OptionDBNamePrefix:extendee -> google.protobuf.FieldOptions
+	5,  // 20: OptionDBLoadSql:extendee -> google.protobuf.FieldOptions
+	5,  // 21: OptionDBNeedEscape:extendee -> google.protobuf.FieldOptions
+	5,  // 22: OptionDBProcParam:extendee -> google.protobuf.FieldOptions
+	5,  // 23: OptionOldName:extendee -> google.protobuf.FieldOptions
+	5,  // 24: OptionTable:extendee -> google.protobuf.FieldOptions
+	5,  // 25: OptionBackUpTabel:extendee -> google.protobuf.FieldOptions
+	0,  // 26: OptionFileDefaultNode:type_name -> NodeType
+	27, // [27:27] is the sub-list for method output_type
+	27, // [27:27] is the sub-list for method input_type
+	26, // [26:27] is the sub-list for extension type_name
+	0,  // [0:26] is the sub-list for extension extendee
 	0,  // [0:0] is the sub-list for field type_name
 }
 
@@ -582,7 +594,7 @@ func file_proto_option_proto_init() {
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_option_proto_rawDesc), len(file_proto_option_proto_rawDesc)),
 			NumEnums:      3,
 			NumMessages:   0,
-			NumExtensions: 25,
+			NumExtensions: 26,
 			NumServices:   0,
 		},
 		GoTypes:           file_proto_option_proto_goTypes,
